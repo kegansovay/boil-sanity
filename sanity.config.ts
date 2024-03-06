@@ -8,15 +8,14 @@ import {structure} from './structure'
 import {customDocumentActions} from './plugins/customDocumentActions'
 import Logo from './components/Logo'
 import {defaultDocumentNode} from './structure/splitPaneDocument'
-import {PROJECT_ID} from './constants'
 
 const devOnlyPlugins = [visionTool()]
 
 export default defineConfig({
   name: 'default',
-  title: 'ecomm-starter',
+  title: 'boil-sanity',
   icon: Logo,
-  projectId: PROJECT_ID,
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'sorry-typescript',
   dataset: 'production',
 
   plugins: [

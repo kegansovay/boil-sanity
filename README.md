@@ -1,8 +1,12 @@
-# Sanity Boilerplate v1
+# Sanity Boilerplate Template
 *Improved version of the boil-studio*
 
-Includes typscript, custom inputs, basic schematypes, and base structure for e-comm.
-If you're looking for e-comm built out check out `boil-sanity-ecomm` in Github
+Includes the following:
+- Typescript
+- Custom Inputs (Slug, Metadescription, Module Picker)
+- Basic Schemas for Modular Page Building
+- Structures for e-comm (use `boil-sanity-ecomm` for full e-comm starter)
+- Help Guide document + structure
 
 
  ## Be sure to edit and review the following files before starting:
@@ -12,8 +16,9 @@ If you're looking for e-comm built out check out `boil-sanity-ecomm` in Github
  - Project Id
  - Custom icon – `Logo.tsx`
 
- ### `.env`
- - change to .env if it's set as `.env.example`
+ ### `.env.example`
+ - change to .env.local 
+ - Edit project ID
  - Add in a preview secret [generate secret](https://randomkeygen.com/) – Be sure to add this to the frontend
 
 

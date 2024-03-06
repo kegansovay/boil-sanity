@@ -19,7 +19,7 @@ export const HelpComponent = () => {
     <div style={{padding: 20}}>
       <h1>Sanity Get Started Guide</h1>
       <div>
-        <iframe src="https://www.loom.com/embed/85a355d852564777ad6bab61675e87fc?sid=5f218a07-b8cc-411d-ac21-d50953c6a569"></iframe>
+        
       </div>
     </div>
   )

@@ -1,8 +1,5 @@
 // Website URL for previews and slugs
-export const URL = 'www.test.com'
-
-//Sanity Project Id - This is not an env because it's public access.
-export const PROJECT_ID = 'r6zhywh5'
+export const URL = 'https://www.kegansovay.com'
 
 // Currency code (ISO 4217) to use when displaying prices in the studio
 // https://en.wikipedia.org/wiki/ISO_4217
