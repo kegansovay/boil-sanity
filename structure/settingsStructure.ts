@@ -1,10 +1,12 @@
 import {ListItemBuilder} from 'sanity/structure'
 import defineStructure from '../utils/defineStructure'
 import navigationStructure from './navigationStructure'
+import { CogIcon } from '@sanity/icons'
 
 export default defineStructure<ListItemBuilder>((S, context) =>
   S.listItem()
     .title('Site Settings')
+    .icon(CogIcon)
     .child(
       S.list()
         .title('Site Settings')
