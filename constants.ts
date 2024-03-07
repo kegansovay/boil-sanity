@@ -1,5 +1,5 @@
 // Website URL for previews and slugs
-export const URL = 'https://www.kegansovay.com'
+export const URL = 'https://www.test.com'
 
 // Currency code (ISO 4217) to use when displaying prices in the studio
 // https://en.wikipedia.org/wiki/ISO_4217
