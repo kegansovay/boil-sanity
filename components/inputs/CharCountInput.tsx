@@ -17,7 +17,7 @@ export function CharCountInput(props: Props) {
             padding: '0.25rem',
             borderRadius: '.2rem',
             fontSize: '0.75rem',
-            border: `${props.value?.length && props.value?.length > count ? '1px solid #f76d5f' : '1px solid #4E4E4E'}`,
+            border: `${props.value?.length && props.value?.length > count ? '1px solid #f76d5f' : '1px solid'}`,
           }}
         >
           {props.value?.length ? props.value.length : '0'}/{count}

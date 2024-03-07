@@ -22,7 +22,7 @@ export default defineField({
     },
     {
       name: 'description',
-      title: 'Meta Description',
+      title: 'Short Description for SEO & Social Sharing (meta description)',
       description:
         '🔸 Optional but highly encouraged since it will help you convert more visitors from Google & social. Keep between 70 and 160 characters. ',
       type: 'text',
