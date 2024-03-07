@@ -14,7 +14,7 @@ export default defineField({
       name: 'title',
       title: 'Title for SEO & Social Sharing',
       description:
-        '🔸 Make it as enticing as possible to convert users in social feeds and Google Searches. Ideally between 15 and 70 characters.',
+        'Make it as enticing as possible to convert users in social feeds and Google Searches. Ideally between 15 and 70 characters.',
       type: 'string',
       components: {input: CharCountInput},
       options: {count: 70},
@@ -34,8 +34,13 @@ export default defineField({
     defineField({
       name: 'opengraphimage',
       title: 'Opengraph Image',
+      description: (
+        <>
+          If left blank the default opengraph image will be used.
+          <br /> Edit the default image <a href="/structure/siteSettings;settings">here</a>
+        </>
+      ),
       type: 'image',
-      validation: (Rule) => Rule.required(),
     }),
   ],
 })

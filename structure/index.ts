@@ -1,8 +1,8 @@
 import {ListItemBuilder, StructureResolver} from 'sanity/structure'
 import homeStructure from './homeStructure'
-import navigationStructure from './navigationStructure'
 import helpStructure from './helpStructure'
 import pageStructure from './pageStructure'
+import settingsStructure from './settingsStructure'
 
 // If you add document types to structure manually, you can add them to this function to prevent duplicates in the root pane
 const hiddenDocTypes = (listItem: ListItemBuilder) => {
@@ -12,7 +12,7 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     return false
   }
 
-  return !['home','page','navigation', 'help', 'media.tag'].includes(id)
+  return !['home','page','settings','navigation', 'help', 'media.tag'].includes(id)
 }
 //BE SURE TO ADD SINGLETONS TO FILTERED LIST ABOVE
 export const structure: StructureResolver = (S, context) =>
@@ -24,7 +24,7 @@ export const structure: StructureResolver = (S, context) =>
       homeStructure(S, context),
       pageStructure(S, context),
       S.divider(),
-      navigationStructure(S, context),
+      settingsStructure(S, context),
       helpStructure(S, context),
       
     ])
