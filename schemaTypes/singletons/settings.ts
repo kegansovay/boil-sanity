@@ -8,8 +8,8 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'opengraphimage',
-      title: 'Opengraph Image',
+      name: 'defaultOGI',
+      title: 'Default Opengraph Image',
       description:
         'This is the default Opengraph image for the whole site. If no images are selected on a page it will show this image as a fallback.',
       type: 'image',

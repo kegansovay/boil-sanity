@@ -34,13 +34,13 @@ export default defineField({
     defineField({
       name: 'opengraphimage',
       title: 'Opengraph Image',
+      type: 'image',
       description: (
         <>
           If left blank the default opengraph image will be used.
           <br /> Edit the default image <a href="/structure/siteSettings;settings">here</a>
         </>
       ),
-      type: 'image',
     }),
   ],
 })
