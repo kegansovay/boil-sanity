@@ -14,7 +14,9 @@ export function CharCountInput(props: Props) {
         <div
           style={{
             display: 'inline-block',
-            padding: '0.25rem',
+            padding: '0.15rem',
+            paddingLeft: '0.25rem',
+            paddingRight: '0.25rem',
             borderRadius: '.2rem',
             fontSize: '0.75rem',
             border: `${props.value?.length && props.value?.length > count ? '1px solid #f76d5f' : '1px solid'}`,
