@@ -10,17 +10,18 @@ export default defineField({
     collapsible: true,
   },
   fields: [
-    {
+    defineField({
       name: 'title',
       title: 'Title for SEO & Social Sharing',
       description:
         'Make it as enticing as possible to convert users in social feeds and Google Searches. Ideally between 15 and 70 characters.',
       type: 'string',
       components: {input: CharCountInput},
+      //@ts-ignore
       options: {count: 70},
       validation: (Rule) => Rule.required(),
-    },
-    {
+    }),
+    defineField({
       name: 'description',
       title: 'Short Description for SEO & Social Sharing (meta description)',
       description:
@@ -28,9 +29,10 @@ export default defineField({
       type: 'text',
       rows: 2,
       components: {input: CharCountInput},
+      //@ts-ignore
       options: {count: 160},
       validation: (Rule) => Rule.max(160),
-    },
+    }),
     defineField({
       name: 'opengraphimage',
       title: 'Opengraph Image',

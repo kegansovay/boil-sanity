@@ -15,7 +15,8 @@ export default defineConfig({
   name: 'default',
   title: 'boil-sanity',
   icon: Logo,
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'sorry-typescript',
+  //@ts-ignore
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
   dataset: 'production',
 
   plugins: [
