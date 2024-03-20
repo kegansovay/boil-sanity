@@ -19,7 +19,7 @@ export default defineField({
       options: {
         source: 'name',
         //@ts-ignore
-        urlPrefix: 'about',
+        urlPrefix: '',
         maxLength: 200,
         storeFullUrl: true,
       },

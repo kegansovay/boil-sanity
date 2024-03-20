@@ -56,7 +56,7 @@ const PrefixedSlugInput = (props: SlugInputProps) => {
   return (
     <Stack space={3}>
       <Flex style={{gap: '0.5em'}} align="center">
-        {prefix && (
+        {prefix && prefix != '/' && (
           // <Tooltip
           //   content={
           //     <Box padding={2}>
@@ -92,7 +92,7 @@ const PrefixedSlugInput = (props: SlugInputProps) => {
         )}
       </Flex>
       <Text size={1}>
-        {URL + '/' + prefix}
+        {prefix == '/' ? URL + prefix : URL + '/' + prefix}
         {props.value?.current || ''}
       </Text>
     </Stack>
