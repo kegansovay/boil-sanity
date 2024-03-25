@@ -4,7 +4,7 @@ import {isDev} from 'sanity'
 import {PAGE_TYPES, URL} from '../constants'
 
 const localhost = `http://localhost:3000/`
-const secret = process.env.SANITY_STUDIO_PREVIEW_SECRET 
+const secret = process.env.SANITY_STUDIO_PREVIEW_SECRET
 
 // Import this into the deskTool() plugin
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
@@ -19,8 +19,12 @@ export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}
           url: {
             origin: isDev ? localhost : URL,
             draftMode: `/api/draft?secret=${secret}`,
-            preview: (document: any) =>
-              document?.slug?.current ? `/${document.slug.fullUrl}` : new Error('Missing slug'),
+            preview: (
+              document: any, //No prefix means it will have a '/' so check for that first
+            ) =>
+              document?.slug?.fullUrl
+                ? `${document.slug.fullUrl[0] == '/' ? '' : '/'}${document.slug.fullUrl}`
+                : new Error('Missing slug'),
           },
           reload: {button: true},
         })
