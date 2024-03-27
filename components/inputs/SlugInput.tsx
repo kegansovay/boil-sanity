@@ -92,7 +92,7 @@ const PrefixedSlugInput = (props: SlugInputProps) => {
         )}
       </Flex>
       <Text size={1}>
-        {prefix == '/' ? URL + prefix : URL + '/' + prefix}
+        { URL + prefix }
         {props.value?.current || ''}
       </Text>
     </Stack>

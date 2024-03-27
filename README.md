@@ -49,7 +49,7 @@ Usage:
   options: {
     source: 'name',
     //@ts-ignore
-    urlPrefix: '', // Still need to add this even if you don't want a prefix
+    urlPrefix: '', // Still need to add this even if you don't want a prefix. Start with '/' so linking works
     maxLength: 200,
     storeFullUrl: true,
   },
