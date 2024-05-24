@@ -19,6 +19,7 @@ Includes the following:
 ### `sanity.config.ts`
 
 - Project Id
+- Project Name
 - Custom icon – `Logo.tsx`
 
 ### `.env.example`

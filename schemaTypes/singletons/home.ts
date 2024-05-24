@@ -1,5 +1,5 @@
 import {HomeIcon} from '@sanity/icons'
-import {defineField} from 'sanity'
+import {defineField, isDev} from 'sanity'
 
 export default {
   name: 'home',
@@ -10,6 +10,8 @@ export default {
     defineField({
       name: 'title',
       type: 'string',
+      initialValue: 'Home Page',
+      readOnly: !isDev,
       validation: (R) => R.required(),
     }),
     defineField({
