@@ -1,5 +1,5 @@
 import {defineField} from 'sanity'
-import PrefixedSlugInput from '../../components/inputs/SlugInput'
+import { defineSlug } from '../../components/defineSlug'
 
 export default defineField({
   name: 'page',
@@ -11,19 +11,12 @@ export default defineField({
       title: 'Name',
       type: 'string',
     }),
-    defineField({
+    defineSlug({
       name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      components: {input: PrefixedSlugInput},
-      options: {
-        source: 'name',
-        //@ts-ignore
-        urlPrefix: '',
-        maxLength: 200,
-        storeFullUrl: true,
-      },
-      validation: (Rule) => Rule.required(),
+      // options: {
+      //   folder: 'podcast/media',
+      //   locked: true,
+      // },
     }),
     defineField({
       name: 'seo',

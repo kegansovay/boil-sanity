@@ -8,6 +8,7 @@ import {structure} from './structure'
 import {customDocumentActions} from './plugins/customDocumentActions'
 import Logo from './components/Logo'
 import {defaultDocumentNode} from './structure/splitPaneDocument'
+import {presentationTool} from 'sanity/presentation'
 
 const devOnlyPlugins = [visionTool()]
 
@@ -22,6 +23,14 @@ export default defineConfig({
     structureTool({
       structure,
       defaultDocumentNode,
+    }),
+    presentationTool({
+      previewUrl: {
+        origin: 'http://localhost:3000',
+        draftMode: {
+          enable: '/api/draft',
+        },
+      },
     }),
     customDocumentActions(),
     media(),
