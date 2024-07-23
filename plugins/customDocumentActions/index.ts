@@ -7,13 +7,13 @@ import {
 import shopifyDelete from './shopifyDelete'
 import shopifyLink from './shopifyLink'
 
-import {LOCKED_DOCUMENT_TYPES, SHOPIFY_DOCUMENT_TYPES} from '../../constants'
+import {LOCKED_DOCUMENT_TYPES, SHOPIFY_DOCUMENT_TYPES, LOCKED_PAGE_SLUGS} from '../../constants'
 
 export const resolveDocumentActions: DocumentActionsResolver = (prev, {schemaType}) => {
   if (LOCKED_DOCUMENT_TYPES.includes(schemaType)) {
     prev = prev.filter(
       (previousAction: DocumentActionComponent) =>
-        previousAction.action === 'publish' || previousAction.action === 'discardChanges'
+        previousAction.action === 'publish' || previousAction.action === 'discardChanges',
     )
   }
 
@@ -22,7 +22,7 @@ export const resolveDocumentActions: DocumentActionsResolver = (prev, {schemaTyp
       (previousAction: DocumentActionComponent) =>
         previousAction.action === 'publish' ||
         previousAction.action === 'unpublish' ||
-        previousAction.action === 'discardChanges'
+        previousAction.action === 'discardChanges',
     )
 
     return [

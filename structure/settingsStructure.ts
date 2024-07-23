@@ -13,6 +13,10 @@ export default defineStructure<ListItemBuilder>((S, context) =>
         .items([
           navigationStructure(S, context),
           S.listItem()
+            .title('Redirects')
+            .schemaType('redirects')
+            .child(S.editor().title('Redirects').schemaType('redirects').documentId('redirects')),
+          S.listItem()
             .title('Settings')
             .schemaType('settings')
             .child(S.editor().title('Settings').schemaType('settings').documentId('settings')),

@@ -30,3 +30,6 @@
 
 /.vscode
 .vscode/settings.json
+
+.yalc/*
+yalc.lock

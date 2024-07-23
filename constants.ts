@@ -16,6 +16,10 @@ export const LOCKED_DOCUMENT_TYPES = ['settings', 'home', 'media.tag', 'navigati
 // - are from the Sanity Connect Shopify app - and can be linked to on Shopify
 export const SHOPIFY_DOCUMENT_TYPES = ['product', 'productVariant', 'collection']
 
+// Individual Pages that are locked via their slug:
+// - Only editable in Dev mode
+export const LOCKED_PAGE_SLUGS = []
+
 // References to include in 'internal' links
 export const PAGE_TYPES = [
   //{type: 'collection'},
@@ -23,6 +27,8 @@ export const PAGE_TYPES = [
   {type: 'home'},
   {type: 'page'},
 ]
+export const pageTypes = PAGE_TYPES.map((page) => page.type)
+
 
 // API version to use when using the Sanity client within the studio
 // https://www.sanity.io/help/studio-client-specify-api-version

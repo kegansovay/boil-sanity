@@ -15,6 +15,7 @@ Includes the following:
 ### `constants.ts`
 
 - Make sure all constants are correct: API version, frontend url, shopify url, locked docs and page types
+- add locked slugs for listing pages
 
 ### `sanity.config.ts`
 

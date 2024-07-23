@@ -12,7 +12,7 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     return false
   }
 
-  return !['home','page','settings','navigation', 'help', 'media.tag'].includes(id)
+  return !['home','page','settings','redirects','navigation', 'help', 'media.tag'].includes(id)
 }
 //BE SURE TO ADD SINGLETONS TO FILTERED LIST ABOVE
 export const structure: StructureResolver = (S, context) =>

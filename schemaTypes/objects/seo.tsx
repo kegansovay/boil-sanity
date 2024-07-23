@@ -1,5 +1,5 @@
+import { CharacterCountInput } from '@madebythread/thread-kit'
 import {defineField} from 'sanity'
-import {CharCountInput} from '../../components/inputs/CharCountInput'
 
 export default defineField({
   name: 'seo',
@@ -16,10 +16,8 @@ export default defineField({
       description:
         'Make it as enticing as possible to convert users in social feeds and Google Searches. Ideally between 15 and 70 characters.',
       type: 'string',
-      components: {input: CharCountInput},
-      //@ts-ignore
-      options: {count: 70},
-      validation: (Rule) => Rule.required(),
+      components: {input: CharacterCountInput},
+      validation: (Rule) => Rule.required().max(70),
     }),
     defineField({
       name: 'description',
@@ -28,9 +26,7 @@ export default defineField({
         '🔸 Optional but highly encouraged since it will help you convert more visitors from Google & social. Keep between 70 and 160 characters. ',
       type: 'text',
       rows: 2,
-      components: {input: CharCountInput},
-      //@ts-ignore
-      options: {count: 160},
+      components: {input: CharacterCountInput},
       validation: (Rule) => Rule.max(160),
     }),
     defineField({

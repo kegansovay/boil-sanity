@@ -17,5 +17,13 @@ export default defineField({
       groups: [{name: 'hero', of: ['hero']}],
     },
   },
-  of: [{type: 'link'}],
+  of: [
+    {
+      title: 'Reusable Section',
+      type: 'reference',
+      to: [{type: 'section'}],
+      options: {category: 'Reusable Section'},
+    },
+    {type: 'link'},
+  ],
 })

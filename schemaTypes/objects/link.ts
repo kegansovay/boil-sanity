@@ -2,11 +2,12 @@
 import {IoIosLink} from 'react-icons/io'
 import {defineField} from 'sanity'
 import { PAGE_TYPES } from '../../constants'
+import { LinkIcon } from '@sanity/icons'
 
 export default defineField({
   name: 'link',
   title: 'Link',
-  icon: IoIosLink,
+  icon: LinkIcon,
   type: 'object',
   fields: [
     defineField({

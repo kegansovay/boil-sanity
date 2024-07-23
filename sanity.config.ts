@@ -9,8 +9,11 @@ import {customDocumentActions} from './plugins/customDocumentActions'
 import Logo from './components/Logo'
 import {defaultDocumentNode} from './structure/splitPaneDocument'
 import {presentationTool} from 'sanity/presentation'
+import { PAGE_TYPES, pageTypes, URL } from './constants'
+import { linkField } from '@madebythread/thread-kit'
 
 const devOnlyPlugins = [visionTool()]
+const SANITY_STUDIO_PREVIEW_URL = isDev ? 'http://localhost:3000' : URL
 
 export default defineConfig({
   name: 'default',
@@ -24,17 +27,21 @@ export default defineConfig({
       structure,
       defaultDocumentNode,
     }),
-    presentationTool({
-      previewUrl: {
-        origin: 'http://localhost:3000',
-        draftMode: {
-          enable: '/api/draft',
-        },
-      },
-    }),
     customDocumentActions(),
     media(),
     noteField(),
+    presentationTool({
+      previewUrl: {
+        origin: SANITY_STUDIO_PREVIEW_URL,
+        previewMode: {enable: '/api/preview'},
+      },
+      title: 'Preview',
+    }),
+    linkField({
+      linkableSchemaTypes: pageTypes,
+      enableAnchorLinks: false,
+      enableLinkParameters: false
+    }),
     ...(isDev ? devOnlyPlugins : []),
   ],
 
